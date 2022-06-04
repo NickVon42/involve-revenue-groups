@@ -1,6 +1,16 @@
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
+
+```bash
+pnpm install
+# or
+npm install
+# or
+yarn
+```
+
+Run the development server:
 
 ```bash
 pnpm run dev
