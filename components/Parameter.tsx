@@ -33,6 +33,7 @@ const Parameter = ({
 				}}
 			>
 				<Image
+					alt="add or remove"
 					src={
 						index === 0
 							? "/add_circle_outline.svg"

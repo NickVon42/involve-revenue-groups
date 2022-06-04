@@ -49,7 +49,12 @@ const Group = ({ group }: Props) => {
 					onClick={() => deleteGroup()}
 					className=" rounded-full w-10 h-10 items-center justify-center bg-gray-100 flex"
 				>
-					<Image src="/Iconsdelete.svg" height={23} width={23} />
+					<Image
+						src="/Iconsdelete.svg"
+						alt="delete"
+						height={23}
+						width={23}
+					/>
 				</button>
 			</div>
 			<p className="text-sm mx-5 text-gray-600 w-4/6 mb-8">
@@ -127,6 +132,7 @@ const Group = ({ group }: Props) => {
 										className=" opacity-30"
 									>
 										<Image
+											alt="delete"
 											src="/Iconsdelete.svg"
 											height={21}
 											width={21}

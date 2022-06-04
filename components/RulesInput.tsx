@@ -10,7 +10,7 @@ export interface RulesInputRef {
 const RulesInput = React.forwardRef<RulesInputRef, any>((_, ref) => {
 	const { unregister } = useFormContext()
 	const [ruleList, setRuleList] = useState<number[]>([0])
-	const handleRemoveItem = (rule: number) => {
+	function handleRemoveItem(rule: number) {
 		setRuleList((list) => list.filter((item) => item !== rule))
 		unregister(`rules.${rule}`)
 	}
@@ -30,7 +30,7 @@ const RulesInput = React.forwardRef<RulesInputRef, any>((_, ref) => {
 						setRuleList((r) => [...r, r[r.length - 1] + 1])
 					}}
 				>
-					<Image src={"/add.svg"} width={20} height={20} />
+					<Image src={"/add.svg"} alt="add" width={20} height={20} />
 					<p className="text-sm text-blue-700 ml-1">Add</p>
 				</button>
 			</div>
@@ -47,3 +47,5 @@ const RulesInput = React.forwardRef<RulesInputRef, any>((_, ref) => {
 })
 
 export default RulesInput
+
+RulesInput.displayName = "Rules"
